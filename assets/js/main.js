@@ -93,7 +93,7 @@
    * Init typed.js
    */
   const selectTyped = document.querySelector('.typed');
-  if (selectTyped) {
+  if (selectTyped && typeof Typed !== 'undefined') {
     let typed_strings = selectTyped.getAttribute('data-typed-items');
     typed_strings = typed_strings.split(',');
     new Typed('.typed', {
@@ -108,7 +108,24 @@
   /**
    * Initiate Pure Counter
    */
-  new PureCounter();
+  if (typeof PureCounter !== 'undefined') {
+    new PureCounter();
+  }
+
+  function setCounterFallbackValues() {
+    document.querySelectorAll('.purecounter').forEach(counter => {
+      const endValue = counter.getAttribute('data-purecounter-end');
+      const currentValue = counter.textContent.trim();
+
+      if (endValue && (!currentValue || currentValue === '0')) {
+        counter.textContent = Number(endValue).toLocaleString('en-IN');
+      }
+    });
+  }
+
+  window.addEventListener('load', () => {
+    setTimeout(setCounterFallbackValues, 1200);
+  });
 
   /**
    * Animate the skills items on reveal
