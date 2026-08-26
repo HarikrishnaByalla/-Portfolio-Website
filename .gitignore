@@ -1,5 +1,7 @@
 .DS_Store
 desktop.ini
+assets/img/Blogs 1.png
+assets/img/blogs 2.png
 node_modules/
 dist/
 .env
