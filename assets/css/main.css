@@ -613,12 +613,40 @@ section,
 }
 
 @media (max-width: 768px) {
+  .hero {
+    min-height: 100svh;
+    padding: 56svh 24px 72px;
+    align-items: flex-end;
+    justify-content: flex-start;
+    overflow: hidden;
+    background: #040b14;
+  }
+
+  .hero img {
+    inset: 56px 0 auto;
+    width: 100%;
+    height: auto;
+    max-height: 50svh;
+    object-fit: contain;
+    object-position: center top;
+  }
+
+  .hero:before {
+    background: linear-gradient(180deg, rgba(4, 11, 20, 0.06) 0%, rgba(4, 11, 20, 0.36) 45%, rgba(4, 11, 20, 0.92) 68%, #040b14 100%);
+  }
+
+  .hero .container {
+    padding: 0;
+  }
+
   .hero h2 {
     font-size: 32px;
+    line-height: 1.15;
   }
 
   .hero p {
     font-size: 20px;
+    line-height: 1.45;
   }
 }
 
