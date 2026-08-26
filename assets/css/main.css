@@ -860,7 +860,8 @@ section,
 .portfolio .portfolio-content img {
   width: 100%;
   aspect-ratio: 4 / 3;
-  object-fit: cover;
+  object-fit: contain;
+  background: #ffffff;
   transition: 0.3s;
 }
 
