@@ -111,6 +111,23 @@
     setTimeout(setCounterFallbackValues, 1200);
   });
 
+  function updateExperienceYears() {
+    const experienceStart = document.body.dataset.experienceStart;
+    if (!experienceStart) return;
+
+    const [startYear, startMonth] = experienceStart.split('-').map(Number);
+    const currentDate = new Date();
+    const months = (currentDate.getFullYear() - startYear) * 12 + currentDate.getMonth() + 1 - startMonth;
+    const years = Math.floor(months / 12);
+    const remainingMonths = months % 12;
+
+    document.querySelectorAll('.experience-years').forEach(element => {
+      element.textContent = `${years}.${remainingMonths}`;
+    });
+  }
+
+  updateExperienceYears();
+
   /**
    * Initiate glightbox
    */
