@@ -6,6 +6,8 @@ const dist = path.join(root, "dist");
 
 const entriesToCopy = [
   "index.html",
+  "case-study-cf.html",
+  "case-study-regal.html",
   "portfolio-details.html",
   "service-details.html",
   "starter-page.html",
