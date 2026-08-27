@@ -9,6 +9,7 @@ const entriesToCopy = [
   "case-study-cf.html",
   "case-study-regal.html",
   "case-study-websites.html",
+  "case-study-dashboard.html",
   "portfolio-details.html",
   "service-details.html",
   "starter-page.html",
