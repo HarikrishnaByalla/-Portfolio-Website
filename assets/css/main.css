@@ -1403,6 +1403,9 @@ section,
 }
 
 .case-study-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 620px;
   height: 100%;
   padding: 32px;
   background: var(--surface-color);
@@ -1450,7 +1453,7 @@ section,
 }
 
 .case-study-card p {
-  min-height: 78px;
+  min-height: 88px;
   color: color-mix(in srgb, var(--default-color), transparent 20%);
   line-height: 1.7;
 }
@@ -1486,11 +1489,13 @@ section,
   display: inline-flex;
   align-items: center;
   gap: 8px;
+  margin-top: auto;
   font-weight: 700;
 }
 
 @media (max-width: 575px) {
   .case-study-card {
+    min-height: 0;
     padding: 24px;
   }
 
