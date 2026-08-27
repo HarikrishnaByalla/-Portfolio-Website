@@ -13,7 +13,6 @@ const entriesToCopy = [
   "portfolio-details.html",
   "service-details.html",
   "starter-page.html",
-  "resume.txt",
   "assets"
 ];
 
