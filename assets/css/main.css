@@ -696,7 +696,8 @@ section,
   line-height: 0;
 }
 
-.stats .stats-item .purecounter {
+.stats .stats-item .purecounter,
+.stats .stats-item .stats-value {
   color: var(--heading-color);
   font-size: 48px;
   line-height: 40px;
